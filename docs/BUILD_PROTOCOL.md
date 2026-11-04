@@ -3,9 +3,6 @@
 **Purpose.** Step-by-step method for building a working prototype of the 
 ISPP (ISPP) Crop Loss Subcommittee database: R Shiny front end, PostgreSQL 
 back end, ORCID sign-in, and a full audit trail. 
-The prototype is hosted on the ARDC Nectar Research Cloud and is meant to be 
-shown to Dr Serge Savary and the subcommittee before approaching ARDC about 
-interim hosting.
 
 **What iteration 1 delivers.** 
 Anyone can browse observations. 
@@ -26,7 +23,7 @@ feedback.
 
 1. Decisions already made
 2. Changes from the Google Sheet draft
-3. Open questions for Serge and the committee
+3. Open questions for the committee
 4. Phase 0: Local environment
 5. Phase 1: Database
 6. Phase 2: Run the app locally
@@ -76,7 +73,7 @@ These are the deliberate differences between `inst/sql/001_schema.sql` and the c
 
 ---
 
-## 3. Open questions for Serge and the committee
+## 3. Open questions for the committee
 
 These are the questions where the prototype had to guess. Raise them at the demo.
 
@@ -211,7 +208,7 @@ These are the questions where the prototype had to guess. Raise them at the demo
 
 ## 8. Phase 4: Deploy to Nectar
 
-**Goal:** the app running at an HTTPS address you can send to Serge.
+**Goal:** the app running at an HTTPS address.
 
 ### 8.1 Instance
 
@@ -278,8 +275,8 @@ Work through this list before sending the link to anyone.
 
 ## 10. Phase 6: Demo, feedback, iteration 2
 
-1. **Serge first.** Send the link with a short note: what it does, the open questions from section 3, and a request to try adding one observation from a paper he knows well.
-2. **Then the subcommittee.** A 15-minute walkthrough: browse, sign in, add, edit, show the history. Then the open questions.
+1. **To the committee.** Send the link : what it does, the open questions from section 3, and a request to try adding one observation.
+2. **Show and tell.** A 15-minute walkthrough: browse, sign in, add, edit, show the history. Then the open questions.
 3. **Capture feedback as GitHub issues**, one per point, labelled `schema`, `ui`, `workflow` or `question`. This creates a public record of how the design was decided.
 4. **Schema changes go in new numbered migration files** (`005_....sql`, `006_....sql`), never by editing `001_schema.sql` once real data exist. A tool like `sqitch` or `dbmate` can be adopted when changes become frequent.
 
